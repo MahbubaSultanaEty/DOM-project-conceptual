@@ -16,8 +16,8 @@
 
 
 </head>
-<body>
-    <header class="w-[80%] mx-auto">
+<body class="w-[80%] mx-auto">
+    <header class="">
         <h1 class="text-6xl font-bold text-green-500">Plant Tracker</h1>
         <div class="grid grid-cols-3 gap-8">
             <div class="bg-amber-200 p-4">
@@ -29,22 +29,257 @@
                 <p id="thriving-count">0</p>
             </div>
             <div class="bg-red-300 p-4">
-                <p id="truggling-count">Strggling</p>
-                <p>0</p>
+                <p >Strggling</p>
+                <p id="struggling-count">0</p>
             </div>
         </div>
     </header>
-    <hr class="my-5 text-gray-300">
+    <hr class="my-5 text-gray-300 ">
+
     <!-- main section -->
     <main>
         <!-- buttons -->
-         <div>
-         <button id="all-filter-btn" class=" btn btn-outline">All</button>
-         <button id="thriving-filter-btn">Thriving</button>
-         <button id="struggling-filter-btn">Struggling</button>
+         <div class="mb-8">
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-black text-white px-3 py-2 ">All</button>
+            <button onclick="toggleStyle('thriving-filter-btn')" id="thriving-filter-btn" class="bg-gray-300 px-3 py-2">Thriving</button>
+            <button onclick="toggleStyle('struggling-filter-btn')" id="struggling-filter-btn" class="bg-gray-300 px-3 py-2">Struggling</button>
          </div>
+
+         <!-- filtered card -->
+          <section id="filtered-section" class="hidden">
+
+          </section>
+
+         <!-- cards section -->
+         <section id="all-card" class="space-y-5">
+            <!-- card-1 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="main-part-1 w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 1</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card-2 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 2</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card-3 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 3</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card-4 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 4</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card-5 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 5</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card-6 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 6</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+            <!-- card 7 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 7</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+
+             <!-- card-8 -->
+             <div class="carD flex justify-between border p-8"> 
+                <!--main part 01 -->
+                <div class="w-4/5 space-y-6">
+                    <!-- part 01 -->
+                    <div >
+                        <p class="plant-name text-3xl">Plant Name: 8</p>
+                        <p class="latin-name">Latin Name</p>
+                    </div>
+                    <!-- part 02 -->
+                    <div class="flex gap-5">
+                        <p class="light bg-gray-200 px-5">Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 03 -->
+                     <p class="state ">Not Applicable</p>
+                     <p class="Notes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, sed.</p>
+                     <div class="flex gap-6">
+                        <button class="triving-btn btn btn-outline btn-success">Thriving</button>
+                        <button class="struggling-btn btn btn-outline btn-error">Struggling</button>
+                     </div>
+                </div>
+
+                <!--main part 02 -->
+                <div>
+                    <button class="btn-delete btn btn-outline btn-warning">Delete</button>
+                </div>
+             </div>
+         </section>
     </main>
 
-    script
+    <script src="./script.js"></script>
 </body>
 </html>
