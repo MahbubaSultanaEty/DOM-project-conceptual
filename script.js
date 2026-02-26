@@ -35,7 +35,7 @@ function toggleStyle(id) {
     selected.classList.add("bg-black", "text-white");
     selected.classList.remove("bg-gray-300", "text-black");
 
-    console.log("click" , id)
+    // console.log("click" , id)
     if (id == "thriving-filter-btn") {
         allCard.classList.add("hidden");
         filterSection.classList.remove("hidden");
@@ -77,7 +77,7 @@ mainContainer.addEventListener("click", function (event) {
     }
 
       
-     parentNode.querySelector(".state").innerText= "thrive"
+    parentNode.querySelector(".state").innerText= "thrive"
     const planExist = thrivingList.find(item => item.plantName == cardInfo.plantName);
         
     
